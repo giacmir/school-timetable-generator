@@ -1,0 +1,38 @@
+<div id="application" class="row">
+	<div class="twelve columns">
+		<div class="btn primary">
+			<a href="#" class="toggle" gumby-trigger="#classes">Classi</a>
+		</div>
+		<div class="btn primary">
+			<a href="#" class="toggle" gumby-trigger="#subjects">Materie</a>
+		</div>
+		<div class="row">
+			<div id="classes" class="six columns">
+				<h4>Classi <div class="btn small secondary"><a href="#" data-bind="click: function() { addToCollection('classes', 'Class') }">+</a></div></h4>
+				<ul>
+					<li data-bind="foreach: classes">
+						<div class="class-form">
+							<div class="field">
+								<div class="btn small danger"><a href="#" data-bind="click: function() { $root.removeFromCollection('classes',$data); }">-</a></div>
+								<input class="wide input" type="text" data-bind="value: name" placeholder="Nome classe">
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="subjects" class="six columns">
+				<h4>Materie <div class="btn small secondary"><a href="#" data-bind="click: function() { addToCollection('subjects', 'Subject') }">+</a></div></h4>
+				<ul>
+					<li data-bind="foreach: subjects">
+						<div class="class-form">
+							<div class="field">
+								<div class="btn small danger"><a href="#" data-bind="click: function() { $root.removeFromCollection('subjects',$data); }">-</a></div>
+								<input class="wide input" type="text" data-bind="value: name" placeholder="Nome materia">
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

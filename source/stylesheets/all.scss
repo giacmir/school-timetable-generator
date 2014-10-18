@@ -1,0 +1,7 @@
+#classes, #subjects {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}

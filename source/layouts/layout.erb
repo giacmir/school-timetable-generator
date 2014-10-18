@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <title><%= current_page.data.title || "The Middleman" %></title>
+    
+    <%= stylesheet_link_tag "http://cdn.jsdelivr.net/gumby/2.5.11/css/gumby.css", "all" %>
+  </head>
+  
+  <body class="<%= page_classes %>">
+    <%= yield %>
+    <%= javascript_include_tag  "http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js",  "https://code.jquery.com/jquery-2.1.1.min.js", "http://cdn.jsdelivr.net/modernizr/2.8.3/modernizr.min.js","http://cdn.jsdelivr.net/gumby/2.5.11/js/libs/gumby.min.js", "all" %>
+  </body>
+</html>
